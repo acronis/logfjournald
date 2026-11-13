@@ -1,9 +1,7 @@
 # logf Appender and Encoder for systemd Journal
 
-[![GoDoc](https://godoc.org/github.com/acronis/logfjournald?status.svg)](https://godoc.org/github.com/acronis/logfjournald)
-[![Build Status](https://travis-ci.org/acronis/logfjournald.svg?branch=master)](https://travis-ci.org/acronis/logfjournald)
-[![Go Report Status](https://goreportcard.com/badge/github.com/acronis/logfjournald)](https://goreportcard.com/report/github.com/acronis/logfjournald)
-[![Coverage Status](https://coveralls.io/repos/github/acronis/logfjournald/badge.svg?branch=master)](https://coveralls.io/github/acronis/logfjournald?branch=master)
+[![Go Reference](https://pkg.go.dev/badge/github.com/acronis/logfjournald.svg)](https://pkg.go.dev/github.com/acronis/logfjournald)
+[![Build Status](https://github.com/acronis/logfjournald/actions/workflows/go.yml/badge.svg)](https://github.com/acronis/logfjournald/actions/workflows/go.yml)
 
 Package `logfjournald` provides `logf` Appender and Encoder for systemd Journal. It supports structured logging and bulk operations with zero allocs.
 
