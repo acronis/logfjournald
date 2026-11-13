@@ -34,7 +34,7 @@ func (e *myError) Error() string {
 }
 
 func (e *myError) Format(f fmt.State, c rune) {
-	f.Write([]byte(e.full))
+	_, _ = f.Write([]byte(e.full))
 }
 
 type user struct {
@@ -392,7 +392,7 @@ func TestEncoder(t *testing.T) {
 		t.Run(tc.Name, func(t *testing.T) {
 			b := logf.NewBuffer()
 			for _, e := range tc.Entry {
-				enc.Encode(b, e)
+				require.NoError(t, enc.Encode(b, e))
 			}
 
 			require.EqualValues(t, tc.Golden, b.Bytes())

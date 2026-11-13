@@ -10,7 +10,7 @@ import (
 func main() {
 	// Create journald Appender with default journald Encoder.
 	appender, appenderClose := logfjournald.NewAppender(logfjournald.NewEncoder.Default())
-	defer appenderClose()
+	defer func() { _ = appenderClose() }()
 
 	// Create ChannelWriter with journald Encoder.
 	writer, writerClose := logf.NewChannelWriter(logf.ChannelWriterConfig{
